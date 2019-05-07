@@ -27,6 +27,9 @@ if [ "$PS1" ]; then
 
     ####################################################################
 
+    # Setup fzf
+    [ -f ~/cfg/fzf/fzf.bash ] && source ~/cfg/fzf/fzf.bash
+
     # Set TERM to xterm-color by default
     export TERM=xterm-color
 
@@ -65,4 +68,3 @@ if [ "$PS1" ]; then
 fi
 
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash

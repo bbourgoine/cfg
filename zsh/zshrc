@@ -1,1 +1,1 @@
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/cfg/fzf/fzf.zsh ] && source ~/cfg/fzf/fzf.zsh
