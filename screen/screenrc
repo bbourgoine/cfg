@@ -1,0 +1,18 @@
+escape "``"
+
+term    screen-256color
+
+# kill startup message
+startup_message off
+	
+# detach on hangup
+# autodetach on
+	
+# define a bigger scrollback, default is 100 lines
+defscrollback 1024
+	
+# shell
+#shell -bash
+	
+hardstatus alwayslastline "%{.Kw} %-w%{.bk} %n | %t %{-}%+w %= %c | %d %M %{.Wk} %H "
+

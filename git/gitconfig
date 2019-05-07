@@ -1,0 +1,7 @@
+[user]
+	name = bbourgoine
+	email = brent.bourgoine@gmail.com
+[color]
+	ui = true
+[core]
+	excludesfile = ~/.gitignore_global

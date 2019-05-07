@@ -1,0 +1,66 @@
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files for examples
+
+# set PATH so it includes user's private bin if it exists
+if [ -d ~/bin ] ; then
+    export PATH="~/bin:${PATH}"
+fi
+
+# For Homebrew/Cask
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# Apparently Lion requires this for some python stuff to be happy
+export ARCHFLAGS='-arch x86_64'
+
+# If running interactively, then:
+if [ "$PS1" ]; then
+
+    ### Aliases #######################################################
+
+    alias c='clear'              # clear screen
+    alias r='reset'              # reset terminal
+
+    alias grep='grep --color=auto'
+    alias ccat='highlight -O ansi'
+
+    alias emacs='emacs -nw'      # I hate non-console emacs
+
+    ####################################################################
+
+    # Set TERM to xterm-color by default
+    export TERM=xterm-color
+
+    # Misc
+    EDITOR="emacs -nw"
+    IRCNICK="b3_"
+
+    # Colors
+    LCYAN="\[\033[1;36m\]"
+    CYAN="\[\033[0;36m\]"
+    YELLOW="\[\033[1;33m\]"
+    DYELLOW="\[\033[0;33m\]"
+    LGREEN="\[\033[1;32m\]"
+    GREEN="\[\033[0;32m\]"
+    RED="\[\033[0;31m\]"
+    LRED="\[\033[1;31m\]"
+    NONE="\[\033[0m\]"
+
+    #TITLEBAR='\[\033]0;\u@\h: ${PWD}\007\]'
+    HOSTPS1="$LCYAN\h$NONE"
+    TIMEPS1="$YELLOW\t$NONE"
+    CWDPS1="$LGREEN\w$NONE"
+
+    COLORPS1="$HOSTPS1:$CWDPS1 \$ "
+    PLAINPS1="\h:\w \$ "
+
+    if [ $TERM = "dumb" ]; then
+       export CLICOLOR=0
+       alias ls='ls --color=none'
+       PS1=$PLAINPS1
+    else
+       export CLICOLOR=1
+       PS1=$COLORPS1
+    fi
+
+fi
+
