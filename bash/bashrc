@@ -25,6 +25,8 @@ if [ "$PS1" ]; then
 
     alias emacs='emacs -nw'      # I hate non-console emacs
 
+    alias vm="virt-manager -c 'qemu+ssh://root@192.168.1.66/system?socket=/var/run/libvirt/libvirt-sock'"
+
     ####################################################################
 
     # Setup fzf
