@@ -1,0 +1,4 @@
+# Append /usr/local/sbin to PATH if available
+if [ -d /usr/local/sbin ] ; then
+    export PATH="${PATH}:/usr/local/bin"
+fi

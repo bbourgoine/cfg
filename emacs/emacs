@@ -1,0 +1,8 @@
+(when (version<= "26.0.50" emacs-version )
+  (global-display-line-numbers-mode)
+  (global-hl-line-mode)
+)
+(unless (display-graphic-p)
+  (menu-bar-mode -1)
+  (load-theme 'tsdh-dark)
+)
