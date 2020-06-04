@@ -3,6 +3,8 @@
 ;; Disable the splash screen (to enable it agin, replace the t with 0)
 (setq inhibit-splash-screen t)
 
+(setq vc-follow-symlinks t)
+
 (when (version<= "26.0.50" emacs-version )
   (global-display-line-numbers-mode)
   (global-hl-line-mode)
