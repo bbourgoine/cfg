@@ -8,6 +8,7 @@ ln -s $SOURCE/bash/bashrc $TARGET/.bashrc
 ln -s $SOURCE/screen/screenrc $TARGET/.screenrc
 ln -s $SOURCE/X11/Xdefaults $TARGET/.Xdefaults
 ln -s $SOURCE/emacs/emacs $TARGET/.emacs
+ln -s $SOURCE/emacs/emacs.d $TARGET/.emacs.d
 ln -s $SOURCE/vim/vimrc $TARGET/.vimrc
 ln -s $SOURCE/git/gitconfig $TARGET/.gitconfig
 ln -s $SOURCE/git/gitignore_global $TARGET/.gitignore_global
