@@ -1,3 +1,7 @@
+# Add user's ~/bin to PATH
+if [ -d $HOME/bin ] ; then
+   export PATH="$HOME/bin:${PATH}"
+fi
 # Append /usr/local/sbin to PATH if available
 if [ -d /usr/local/sbin ] ; then
     export PATH="${PATH}:/usr/local/bin"
