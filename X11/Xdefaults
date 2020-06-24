@@ -1,3 +1,11 @@
+! Tell everyone we support 256 colors
+xterm*termName: xterm-256color
+
+! Make text bright, not fat, when it is bold
+xterm*boldMode: false
+xterm*colorBDMode: true
+xterm*colorBD: rgb:fc/fc/fc
+
 #define nord0 #2E3440
 #define nord1 #3B4252
 #define nord2 #434C5E
