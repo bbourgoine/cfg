@@ -12,6 +12,9 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 # Apparently Lion requires this for some python stuff to be happy
 export ARCHFLAGS='-arch x86_64'
 
+# I'm an adult, let me use bash in peace when I want to.
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 # If running interactively, then:
 if [ "$PS1" ]; then
 
