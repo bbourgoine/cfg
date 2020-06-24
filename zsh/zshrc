@@ -33,4 +33,6 @@ source ~/cfg/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias ls="exa -g --group-directories-first"
+if [[ -x /usr/local/bin/exa ]]; then
+  alias ls="exa -g --group-directories-first"
+fi
