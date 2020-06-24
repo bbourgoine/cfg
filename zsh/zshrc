@@ -5,9 +5,15 @@ if [[ "$OSTYPE" == darwin* ]]; then
   ls -G . &>/dev/null && alias ls='ls -G'
 fi
 
-source ~/cfg/zsh/yukeake.zsh-theme
+if [[ `whoami` = "root" ]]; then
+  CONFDIR=$ZDOTDIR
+else
+  CONFDIR=$HOME
+fi
 
-source ~/cfg/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $CONFDIR/cfg/zsh/yukeake.zsh-theme
+
+source $CONFDIR/cfg/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -32,7 +38,9 @@ source ~/cfg/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias go2autoscale="cd /Users/brent/Projects/Grid/GridDeployment/CNext.internal/resources/deployment/Cloud/Grid/default/data/OperationsAgent/scripts/Grid"
 
 if [[ -x /usr/local/bin/exa ]]; then
   alias ls="exa -g --group-directories-first"
 fi
+
