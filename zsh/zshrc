@@ -32,3 +32,5 @@ source ~/cfg/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias ls="exa -g --group-directories-first"
