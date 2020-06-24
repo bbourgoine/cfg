@@ -22,4 +22,7 @@ augroup numbertoggle
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
 nmap <C-N><C-N> :set nonumber! norelativenumber! number?<CR>
+nmap <C-N><C-A> :set number norelativenumber number?<CR>
+nmap <C-N><C-R> :set nonumber relativenumber number?<CR>
+nmap <C-N><C-H> :set number relativenumber number?<CR>
 
