@@ -11,9 +11,17 @@ else
   CONFDIR=$HOME
 fi
 
-source $CONFDIR/cfg/zsh/yukeake.zsh-theme
+if [[ -f $CONFDIR/cfg/zsh/yukeake.zsh-theme ]]; then
+  source $CONFDIR/cfg/zsh/yukeake.zsh-theme
+fi
 
-source $CONFDIR/cfg/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [[ -f $CONFDIR/cfg/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+  source $CONFDIR/cfg/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
+if [[ -f $CONFDIR/cfg/fzf/fzf.zsh ]]; then
+  source $CONFDIR/cfg/fzf/fzf.zsh
+fi
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -38,6 +46,9 @@ source $CONFDIR/cfg/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias cv="curl -s 'https://corona-stats.online/?top=5&minimal=true' | head -n 7"
+
 alias go2autoscale="cd /Users/brent/Projects/Grid/GridDeployment/CNext.internal/resources/deployment/Cloud/Grid/default/data/OperationsAgent/scripts/Grid"
 
 if [[ -x /usr/local/bin/exa ]]; then

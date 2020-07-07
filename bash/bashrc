@@ -30,6 +30,8 @@ if [ "$PS1" ]; then
 
     alias vm="virt-manager -c 'qemu+ssh://root@192.168.1.66/system?socket=/var/run/libvirt/libvirt-sock'"
 
+    alias cv="curl -s 'https://corona-stats.online/?top=5&minimal=true' | head -n 7"
+
     ####################################################################
 
     # Setup fzf
