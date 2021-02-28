@@ -48,6 +48,7 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias cv="curl -s 'https://corona-stats.online/?top=5&minimal=true' | head -n 7"
+alias ww="curl -ks 'wttr.in/?2nq'"
 
 alias go2autoscale="cd /Users/brent/Projects/Grid/GridDeployment/CNext.internal/resources/deployment/Cloud/Grid/default/data/OperationsAgent/scripts/Grid"
 

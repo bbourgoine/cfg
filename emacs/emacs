@@ -10,6 +10,7 @@
 (unless (display-graphic-p)
   (menu-bar-mode -1)
   (load-theme 'tsdh-dark)
+  (custom-set-faces '(default ((t (:background "undefined")))))  
 )
 (global-font-lock-mode 1)
 
@@ -28,3 +29,7 @@
 ;; Set lisp-mode for .emacs since for some reason elisp-mode isn't there
 (add-to-list 'auto-mode-alist '("^\\.emacs$" . lisp-mode))
 (add-to-list 'auto-mode-alist '("emacs" . lisp-mode))
+
+(add-to-list 'load-path "~/.emacs.d/emacs-libvterm")
+(require 'vterm)
+
