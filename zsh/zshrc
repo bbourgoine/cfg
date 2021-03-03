@@ -49,7 +49,11 @@ fi
 
 alias cv="curl -s 'https://corona-stats.online/?top=5&minimal=true' | head -n 7"
 
-alias go2autoscale="cd /Users/brent/Projects/Grid/GridDeployment/CNext.internal/resources/deployment/Cloud/Grid/default/data/OperationsAgent/scripts/Grid"
+alias go2autoscale="cd /Users/brent/Projects/Grid1/GridDeployment/CNext.internal/resources/deployment/Cloud/Grid/default/data/OperationsAgent/scripts/Grid"
+
+alias gl="git log --oneline"
+alias gl5="git log --oneline -5"
+alias gl10="git log --oneline -10"
 
 if [[ -x /usr/local/bin/exa ]]; then
   alias ls="exa -g --group-directories-first"
