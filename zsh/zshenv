@@ -2,7 +2,13 @@
 if [ -d $HOME/bin ] ; then
    export PATH="$HOME/bin:${PATH}"
 fi
+
+# Append /usr/local/bin to PATH if available
+if [ -d /usr/local/bin ] ; then
+    export PATH="${PATH}:/usr/local/bin"
+fi
+
 # Append /usr/local/sbin to PATH if available
 if [ -d /usr/local/sbin ] ; then
-    export PATH="${PATH}:/usr/local/bin"
+    export PATH="${PATH}:/usr/local/sbin"
 fi
