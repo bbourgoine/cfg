@@ -17,6 +17,8 @@ if [ -f $TARGET/.bashrc ]; then mv $TARGET/.bashrc $BACKUP/.bashrc; fi
 ln -s $SOURCE/bash/bashrc $TARGET/.bashrc
 if [ -f $TARGET/.screenrc ]; then mv $TARGET/.screenrc $BACKUP/.screenrc; fi
 ln -s $SOURCE/screen/screenrc $TARGET/.screenrc
+if [ -f $TARGET/.tmux.conf ]; then mv $TARGET/.tmux.conf $BACKUP/.tmux.conf; fi
+ln -s $SOURCE/tmux/tmux.conf $TARGET/.tmux.conf
 if [ -f $TARGET/.Xdefaults ]; then mv $TARGET/.Xdefaults $BACKUP/.Xdefaults; fi
 ln -s $SOURCE/X11/Xdefaults $TARGET/.Xdefaults
 if [ -f $TARGET/.emacs ]; then mv $TARGET/.emacs $BACKUP/.emacs; fi
