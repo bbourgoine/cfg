@@ -56,7 +56,7 @@ alias gl="git log --oneline"
 alias gl5="git log --oneline -5"
 alias gl10="git log --oneline -10"
 
-if [[ -x /usr/local/bin/exa ]]; then
+if [[ -x /usr/local/bin/exa || -x /usr/bin/exa ]]; then
   alias ls="exa -g --group-directories-first"
 fi
 
