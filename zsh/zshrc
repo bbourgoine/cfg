@@ -11,6 +11,11 @@ else
   CONFDIR=$HOME
 fi
 
+# Save command history
+HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
+HISTSIZE=2000
+SAVEHIST=1000
+
 if [[ -f $CONFDIR/cfg/zsh/yukeake.zsh-theme ]]; then
   source $CONFDIR/cfg/zsh/yukeake.zsh-theme
 fi
