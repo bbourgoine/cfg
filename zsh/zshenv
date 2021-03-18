@@ -12,3 +12,6 @@ fi
 if [ -d /usr/local/sbin ] ; then
     export PATH="${PATH}:/usr/local/sbin"
 fi
+
+export LANG=en_US.UTF-8
+
