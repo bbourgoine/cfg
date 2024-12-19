@@ -30,6 +30,6 @@
 (add-to-list 'auto-mode-alist '("^\\.emacs$" . lisp-mode))
 (add-to-list 'auto-mode-alist '("emacs" . lisp-mode))
 
-(add-to-list 'load-path "~/.emacs.d/emacs-libvterm")
-(require 'vterm)
+;(add-to-list 'load-path "~/.emacs.d/emacs-libvterm")
+;(require 'vterm)
 

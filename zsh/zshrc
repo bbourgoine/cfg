@@ -28,6 +28,18 @@ if [[ -f $CONFDIR/cfg/fzf/fzf.zsh ]]; then
   source $CONFDIR/cfg/fzf/fzf.zsh
 fi
 
+if [ -d /opt/homebrew/bin ]; then
+   PATH=/opt/homebrew/bin:${PATH}
+fi
+
+if [ -d /opt/homebrew/sbin ]; then
+   PATH=/opt/homebrew/sbin:${PATH}
+fi
+
+if [ -d $HOME/.config/emacs/bin ]; then
+   PATH=$HOME/.config/emacs/bin:${PATH}
+fi
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -61,7 +73,20 @@ alias gl="git log --oneline"
 alias gl5="git log --oneline -5"
 alias gl10="git log --oneline -10"
 
-if [[ -x /usr/local/bin/exa || -x /usr/bin/exa ]]; then
-  alias ls="exa -g --group-directories-first"
+if [[ -x /usr/local/bin/exa || -x /usr/bin/exa || -x /opt/homebrew/bin/exa ]]; then
+  export EXA_ICON_SPACING=2
+  alias ls="exa --icons --git -g --group-directories-first"
 fi
 
+if [[ -x /usr/local/bin/eza || -x /usr/bin/eza || -x /opt/homebrew/bin/eza ]]; then
+  export EXA_ICON_SPACING=2
+  alias ls="eza --icons --git -g --group-directories-first"
+fi
+
+#alias python=/opt/homebrew/bin/python3.10
+#alias python3=/opt/homebrew/bin/python3.10
+
+# Disable Homebrew analytics
+export HOMEBREW_NO_ANALYTICS=1
+
+eval "$(zoxide init --cmd=cd zsh)"

@@ -1,6 +1,14 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files for examples
 
+if [ -d /opt/homebrew/bin ]; then
+   export PATH="/opt/homebrew/bin:${PATH}"
+fi
+
+if [ -d /opt/homebrew/sbin ]; then
+   export PATH="/opt/homebrew/sbin:${PATH}"
+fi
+
 # set PATH so it includes user's private bin if it exists
 if [ -d ~/bin ] ; then
     export PATH="~/bin:${PATH}"
