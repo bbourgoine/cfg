@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # User configuration
 
 # Default to color LS if available on OSX
@@ -16,12 +23,20 @@ HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
 HISTSIZE=2000
 SAVEHIST=1000
 
-if [[ -f $CONFDIR/cfg/zsh/yukeake.zsh-theme ]]; then
-  source $CONFDIR/cfg/zsh/yukeake.zsh-theme
+#if [[ -f $CONFDIR/cfg/zsh/yukeake.zsh-theme ]]; then
+#  source $CONFDIR/cfg/zsh/yukeake.zsh-theme
+#fi
+
+if [[ -f /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme ]]; then
+  source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 fi
 
 if [[ -f $CONFDIR/cfg/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
   source $CONFDIR/cfg/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
+if [[ -f /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
+  source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
 if [[ -f $CONFDIR/cfg/fzf/fzf.zsh ]]; then
@@ -73,13 +88,13 @@ alias gl="git log --oneline"
 alias gl5="git log --oneline -5"
 alias gl10="git log --oneline -10"
 
-if [[ -x /usr/local/bin/exa || -x /usr/bin/exa || -x /opt/homebrew/bin/exa ]]; then
-  export EXA_ICON_SPACING=2
-  alias ls="exa --icons --git -g --group-directories-first"
-fi
+#if [[ -x /usr/local/bin/exa || -x /usr/bin/exa || -x /opt/homebrew/bin/exa ]]; then
+#  export EXA_ICON_SPACING=2
+#  alias ls="exa --icons --git -g --group-directories-first"
+#fi
 
 if [[ -x /usr/local/bin/eza || -x /usr/bin/eza || -x /opt/homebrew/bin/eza ]]; then
-  export EXA_ICON_SPACING=2
+  export EZA_ICON_SPACING=2
   alias ls="eza --icons --git -g --group-directories-first"
 fi
 
@@ -90,3 +105,6 @@ fi
 export HOMEBREW_NO_ANALYTICS=1
 
 eval "$(zoxide init --cmd=cd zsh)"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
