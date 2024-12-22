@@ -9,8 +9,10 @@ BACKUP=~/backup
 # For each file/directory, check that it exists, back it up if it does, then replace it with the symlink
 if [ -f $TARGET/.zshrc ]; then mv $TARGET/.zshrc $BACKUP/.zshrc; fi
 ln -s $SOURCE/zsh/zshrc $TARGET/.zshrc
-if [ -f $TARGET/.zshenv ]; then mv $TARGET/.zshenv $BACKUP/.zshenv; fi
-ln -s $SOURCE/zsh/zshenv $TARGET/.zshenv
+if [ -f $TARGET/.p10k.zsh ]; then mv $TARGET/.p10k.zsh $BACKUP/.p10k.zsh; fi
+ln -s $SOURCE/zsh/p10k.zsh $TARGET/.p10k.zsh
+if [ -f $TARGET/.zshrc ]; then mv $TARGET/.zshrc $BACKUP/.zshrc; fi
+ln -s $SOURCE/zsh/zshrc $TARGET/.zshrc
 if [ -f $TARGET/.bash_profile ]; then mv $TARGET/.bash_profile $BACKUP/.bash_profile; fi
 ln -s $SOURCE/bash/bash_profile $TARGET/.bash_profile
 if [ -f $TARGET/.bashrc ]; then mv $TARGET/.bashrc $BACKUP/.bashrc; fi
