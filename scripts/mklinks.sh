@@ -33,4 +33,6 @@ if [ -f $TARGET/.gitconfig ]; then mv $TARGET/.gitconfig $BACKUP/.gitconfig; fi
 ln -s $SOURCE/git/gitconfig $TARGET/.gitconfig
 if [ -f $TARGET/.gitignore_global ]; then mv $TARGET/.gitignore_global $BACKUP/.gitignore_global; fi
 ln -s $SOURCE/git/gitignore_global $TARGET/.gitignore_global
+if [ -d $TARGET/.config/ghostty ]; then mv $TARGET/.config/ghostty $BACKUP/ghostty; fi
+ln -s $SOURCE/ghostty $TARGET/.config/ghostty
 
