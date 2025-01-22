@@ -1,0 +1,9 @@
+cursor-style = block
+cursor-style-blink = false
+font-family = "UbuntuMono Nerd Font Mono"
+font-size = 18
+shell-integration-features = no-cursor,no-sudo,title
+#theme = "Github Dark"
+theme = "catppuccin-mocha"
+window-height = 35
+window-width = 120
