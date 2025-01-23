@@ -29,6 +29,8 @@ SAVEHIST=1000
 
 if [[ -f /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme ]]; then
   source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+elif [[ -f /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme ]]; then
+  source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 fi
 
 if [[ -f $CONFDIR/cfg/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then

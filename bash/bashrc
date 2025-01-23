@@ -83,3 +83,6 @@ if [ "$PS1" ]; then
 fi
 
 
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/brent/.cache/lm-studio/bin"
